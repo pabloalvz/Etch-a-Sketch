@@ -17,6 +17,10 @@ button {
     min-height: auto;
     display: flex;
     flex-direction: row;
+    flex-grow: 1;
+    justify-content: center;
+    border-color: black;
+    border: solid 1px;
 }
 .column {
     display: flex;
@@ -24,10 +28,9 @@ button {
     flex-wrap: wrap;
     min-height: 90vh;
     flex-basis: 6.25%;
+    flex-grow: 1;
 
 }
 .row {
     flex-basis: 100%;
-    border-color: black;
-    border: solid 1px;
 }
