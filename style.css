@@ -3,7 +3,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;      
+    justify-content: center; 
+    align-items: center;     
 }
 button {
     margin: 10px;
@@ -12,7 +13,8 @@ button {
     width: 60px;
 }
 #container { 
-    min-height: 90vh;
+    width: 960px;
+    min-height: auto;
     display: flex;
     flex-direction: row;
 }

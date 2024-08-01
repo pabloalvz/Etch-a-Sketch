@@ -5,7 +5,6 @@ createGrid(scale);
 
 scalebtn.addEventListener("click", () => {
     scale = parseInt(prompt("Choose a scale between 1 and 100"));
-    console.log(scale);
     while ((scale > 100) || (scale < 1)) {
         scale = parseInt(prompt("C'mon you can do it"));
     }
@@ -27,10 +26,22 @@ function createGrid(){
         }
     }
 
+    let opac = 0;
     const rows = document.querySelectorAll(".row");
-    rows.forEach(row => {
-        row.addEventListener("mouseover", ()=> {
-            row.setAttribute("style", "background-color:black");
+    if (opac <= 1) {
+        rows.forEach(row => {
+            row.addEventListener("mouseover", ()=> {
+                var randomRGB = Math.floor(Math.random()*16777215).toString(16);
+                var randomColor = "#" + randomRGB;
+                var cols = document.querySelectorAll(".column");
+                row.style.backgroundColor = randomColor;
+                cols.forEach(col =>{
+                col.style.opacity = String(opac);
+                col.style.backgroundColor = "black";
+                } )
+                
+                opac = opac + 0.02; 
+            })
         })
-    })
+    } else {}
 }
