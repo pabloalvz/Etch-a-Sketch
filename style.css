@@ -1,0 +1,31 @@
+body {
+    width: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;      
+}
+button {
+    margin: 10px;
+    margin-left: 50%;
+    margin-right: 50%;
+    width: 60px;
+}
+#container { 
+    min-height: 90vh;
+    display: flex;
+    flex-direction: row;
+}
+.column {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 90vh;
+    flex-basis: 6.25%;
+
+}
+.row {
+    flex-basis: 100%;
+    border-color: black;
+    border: solid 1px;
+}
